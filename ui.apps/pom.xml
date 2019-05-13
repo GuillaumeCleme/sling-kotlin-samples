@@ -63,6 +63,11 @@
                             <artifactId>sling-kotlin-samples.core</artifactId>
                             <target>/apps/kotlinsamples/install</target>
                         </embedded>
+                        <embedded>
+                            <groupId>org.jetbrains.kotlin</groupId>
+                            <artifactId>kotlin-osgi-bundle</artifactId>
+                            <target>/apps/kotlinsamples/install</target>
+                        </embedded>
                     </embeddeds>
                     <subPackages>
                         <subPackage>

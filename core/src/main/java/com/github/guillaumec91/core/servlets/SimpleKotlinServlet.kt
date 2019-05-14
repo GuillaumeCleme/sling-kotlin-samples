@@ -1,5 +1,6 @@
 package com.github.guillaumec91.core.servlets
 
+import com.github.guillaumec91.core.config.SimpleKotlinServletConfig
 import org.apache.sling.api.SlingHttpServletRequest
 import org.apache.sling.api.SlingHttpServletResponse
 import org.apache.sling.api.servlets.HttpConstants
@@ -7,14 +8,17 @@ import org.apache.sling.api.servlets.SlingSafeMethodsServlet
 import org.osgi.framework.Constants
 import org.osgi.service.component.annotations.Activate
 import org.osgi.service.component.annotations.Component
-import org.osgi.service.metatype.annotations.AttributeDefinition
 import org.osgi.service.metatype.annotations.Designate
-import org.osgi.service.metatype.annotations.ObjectClassDefinition
 import java.io.IOException
 import javax.servlet.Servlet
 import javax.servlet.ServletException
 
-@Designate(ocd = SimpleKotlinServlet.Config::class)
+/**
+ * Sample Kotlin based SlingServlet using a Java
+ * annotation class for OSGI configurations
+ */
+//Designate to Java class due to annotation constraints
+@Designate(ocd = SimpleKotlinServletConfig::class)
 @Component(service = [Servlet::class],
         property = [
             Constants.SERVICE_DESCRIPTION + "=Simple Kotlin Servlet",
@@ -24,29 +28,19 @@ import javax.servlet.ServletException
         ])
 class SimpleKotlinServlet : SlingSafeMethodsServlet() {
 
-    private var myParameter: String? = null
-
-    @ObjectClassDefinition(name = "Sample Kotlin servlet",
-            description = "Simple Kotlin servlet with configurable properties")
-    public annotation class  Config (
-        val value : String = "hello"
-    )
-
-    @AttributeDefinition(name = "A parameter", description = "Can be configured in /system/console/configMgr")
-    fun myParameter(config: Config) : String {
-        return config.value
-    }
+    private var myParameter: String = ""
 
     @Throws(ServletException::class, IOException::class)
     override fun doGet(req: SlingHttpServletRequest,
                        resp: SlingHttpServletResponse) {
         resp.contentType = "text/plain"
         resp.writer.write("Hello World in Kotlin, myParameter: $myParameter")
+        resp.writer.close()
     }
 
     @Activate
-    protected fun activate(config: Config) {
-        myParameter = myParameter(config)
+    protected fun activate(config: SimpleKotlinServletConfig) {
+        myParameter = config.myParameter
     }
 
     companion object {

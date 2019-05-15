@@ -13,6 +13,8 @@ import java.io.IOException
 import javax.servlet.Servlet
 import javax.servlet.ServletException
 
+private const val SERVLET_PATHS = "/bin/kotlinsamples/simplekotlinservlet"
+
 /**
  * Sample Kotlin based SlingServlet using a Java
  * annotation class for OSGI configurations
@@ -21,10 +23,9 @@ import javax.servlet.ServletException
 @Designate(ocd = KotlinSamplesConfig.SimpleKotlinServletConfig::class)
 @Component(service = [Servlet::class],
         property = [
-            Constants.SERVICE_DESCRIPTION + "=Simple Kotlin Servlet",
-            "sling.servlet.methods=" + HttpConstants.METHOD_GET,
-            "sling.servlet.paths=" + "/bin/kotlinsamples/simplekotlinservlet",
-            "sling.servlet.extensions=" + "txt"
+            "${Constants.SERVICE_DESCRIPTION}=Simple Kotlin Servlet",
+            "sling.servlet.methods=${HttpConstants.METHOD_GET}",
+            "sling.servlet.paths=$SERVLET_PATHS"
         ])
 class SimpleKotlinServlet : SlingSafeMethodsServlet() {
 

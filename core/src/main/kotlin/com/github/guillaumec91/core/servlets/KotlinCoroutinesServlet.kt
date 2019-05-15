@@ -16,6 +16,8 @@ import java.io.IOException
 import javax.servlet.Servlet
 import javax.servlet.ServletException
 
+private const val SERVLET_PATHS = "/bin/kotlinsamples/kotlincoroutinesservlet"
+
 /**
  * Sample Kotlin based SlingServlet using
  * Coroutines
@@ -24,15 +26,14 @@ import javax.servlet.ServletException
  */
 @Component(service = [Servlet::class],
         property = [
-            Constants.SERVICE_DESCRIPTION + "=Simple Kotlin Servlet",
-            "sling.servlet.methods=" + HttpConstants.METHOD_GET,
-            "sling.servlet.paths=" + "/bin/kotlinsamples/kotlincoroutinesservlet",
-            "sling.servlet.extensions=" + "txt"
+            "${Constants.SERVICE_DESCRIPTION}=Kotlin Coroutines Servlet",
+            "sling.servlet.methods=${HttpConstants.METHOD_GET}",
+            "sling.servlet.paths=$SERVLET_PATHS"
         ])
 class KotlinCoroutinesServlet : SlingSafeMethodsServlet() {
 
-    private val log: Logger = LoggerFactory.getLogger(this.javaClass)
-
+    private val log: Logger = LoggerFactory.getLogger(javaClass)
+    
     @Throws(ServletException::class, IOException::class)
     override fun doGet(req: SlingHttpServletRequest,
                        resp: SlingHttpServletResponse) {

@@ -58,10 +58,12 @@
                 <configuration>
                     <exportScr>true</exportScr>
                     <instructions>
+                        <Embed-Dependency>kotlinx-coroutines-core</Embed-Dependency>
                         <!-- Import any version of javax.inject and javax.annotation, to allow running on multiple versions of AEM -->
                         <Import-Package>
                             javax.inject;version=0.0.0,
                             javax.annotation;version=0.0.0,
+                            !kotlinx.atomicfu,
                             *
                         </Import-Package>
                         <Sling-Model-Packages>
@@ -98,6 +100,11 @@
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-maven-plugin</artifactId>
                 <version>${kotlin.version}</version>
+                <configuration>
+                    <args>
+                        <arg>-Xcoroutines=enable</arg>
+                    </args>
+                </configuration>
                 <executions>
                     <execution>
                         <id>compile</id>
@@ -197,6 +204,10 @@
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains.kotlinx</groupId>
+            <artifactId>kotlinx-coroutines-core</artifactId>
         </dependency>
     </dependencies>
 </project>

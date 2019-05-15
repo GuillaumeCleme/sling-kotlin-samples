@@ -21,7 +21,7 @@
     <groupId>com.github.guillaumec91</groupId>
     <artifactId>sling-kotlin-samples</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 
     <name>Sling Kotlin Samples</name>
     <description>Sling based Kotlin OSGI samples</description>

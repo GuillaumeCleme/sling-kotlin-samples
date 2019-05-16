@@ -27,12 +27,12 @@ private const val SERVLET_PATHS = "/bin/kotlinsamples/simplekotlinservlet"
             "sling.servlet.methods=${HttpConstants.METHOD_GET}",
             "sling.servlet.paths=$SERVLET_PATHS"
         ])
-class SimpleKotlinServlet : SlingSafeMethodsServlet() {
+open class SimpleKotlinServlet : SlingSafeMethodsServlet() {
 
     private var config: KotlinSamplesConfig.SimpleKotlinServletConfig? = null
 
     @Throws(ServletException::class, IOException::class)
-    override fun doGet(req: SlingHttpServletRequest,
+    public override fun doGet(req: SlingHttpServletRequest,
                        resp: SlingHttpServletResponse) {
         resp.contentType = "text/plain"
         resp.writer.write("Hello World in Kotlin, myParameter: ${config?.myParameter}")
@@ -40,7 +40,7 @@ class SimpleKotlinServlet : SlingSafeMethodsServlet() {
     }
 
     @Activate
-    protected fun activate(config: KotlinSamplesConfig.SimpleKotlinServletConfig) {
+    fun activate(config: KotlinSamplesConfig.SimpleKotlinServletConfig) {
         this.config = config
     }
 

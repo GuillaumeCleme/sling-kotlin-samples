@@ -33,11 +33,8 @@ class KotlinLoggingFilter : Filter {
                           filterChain: FilterChain) {
 
         val slingRequest = request as SlingHttpServletRequest
-        log.info("Request for {" +
-                "${slingRequest.requestPathInfo.resourcePath}" +
-                "}, with selector {" +
-                "${slingRequest.requestPathInfo.selectorString}" +
-                "}")
+        log.info("Request for {${slingRequest.requestPathInfo.resourcePath}}, with selector " +
+                "{${slingRequest.requestPathInfo.selectorString}}")
 
         filterChain.doFilter(request, response)
     }

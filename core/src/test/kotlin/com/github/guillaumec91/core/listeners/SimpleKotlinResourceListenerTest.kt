@@ -1,6 +1,5 @@
-package github.guillaumec91.core.listeners
+package com.github.guillaumec91.core.listeners
 
-import com.github.guillaumec91.core.listeners.SimpleKotlinResourceListener
 import org.apache.sling.api.SlingConstants
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test

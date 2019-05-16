@@ -1,19 +1,15 @@
-package github.guillaumec91.core.models
-
-import com.github.guillaumec91.core.models.HelloWorldKotlinModel
-
-import org.apache.commons.lang3.StringUtils
-import org.apache.sling.api.resource.Resource
-import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.extension.ExtendWith
+package com.github.guillaumec91.core.models
 
 import com.day.cq.wcm.api.Page
 import io.wcm.testing.mock.aem.junit5.AemContext
 import io.wcm.testing.mock.aem.junit5.AemContextExtension
-
+import org.apache.commons.lang3.StringUtils
+import org.apache.sling.api.resource.Resource
 import org.junit.jupiter.api.Assertions.assertNotNull
 import org.junit.jupiter.api.Assertions.assertTrue
+import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.extension.ExtendWith
 
 /**
  * Simple JUnit test verifying the HelloWorldModel

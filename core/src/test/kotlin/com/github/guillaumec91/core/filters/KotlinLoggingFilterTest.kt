@@ -1,6 +1,5 @@
-package github.guillaumec91.core.filters
+package com.github.guillaumec91.core.filters
 
-import com.github.guillaumec91.core.filters.KotlinLoggingFilter
 import io.wcm.testing.mock.aem.junit5.AemContext
 import io.wcm.testing.mock.aem.junit5.AemContextExtension
 import org.apache.sling.testing.mock.sling.servlet.MockRequestPathInfo

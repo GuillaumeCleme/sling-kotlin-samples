@@ -17,7 +17,7 @@ import javax.annotation.PostConstruct
 @Model(adaptables = [Resource::class])
 class HelloWorldKotlinModel {
 
-    private var message: String = ""
+    var message: String = ""
 
     @ValueMapValue(name = PROPERTY_RESOURCE_TYPE, injectionStrategy = InjectionStrategy.OPTIONAL)
     @Default(values = ["No resourceType"])

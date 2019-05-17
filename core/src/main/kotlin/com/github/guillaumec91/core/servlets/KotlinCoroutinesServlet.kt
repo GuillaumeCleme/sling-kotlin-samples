@@ -1,9 +1,6 @@
 package com.github.guillaumec91.core.servlets
 
-import kotlinx.coroutines.Deferred
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.async
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.*
 import org.apache.sling.api.SlingHttpServletRequest
 import org.apache.sling.api.SlingHttpServletResponse
 import org.apache.sling.api.servlets.HttpConstants
@@ -16,6 +13,8 @@ import java.io.IOException
 import javax.servlet.Servlet
 import javax.servlet.ServletException
 
+private const val SERVLET_PATHS = "/bin/kotlinsamples/kotlincoroutinesservlet"
+
 /**
  * Sample Kotlin based SlingServlet using
  * Coroutines
@@ -24,17 +23,17 @@ import javax.servlet.ServletException
  */
 @Component(service = [Servlet::class],
         property = [
-            Constants.SERVICE_DESCRIPTION + "=Simple Kotlin Servlet",
-            "sling.servlet.methods=" + HttpConstants.METHOD_GET,
-            "sling.servlet.paths=" + "/bin/kotlinsamples/kotlincoroutinesservlet",
-            "sling.servlet.extensions=" + "txt"
+            "${Constants.SERVICE_DESCRIPTION}=Kotlin Coroutines Servlet",
+            "sling.servlet.methods=${HttpConstants.METHOD_GET}",
+            "sling.servlet.paths=$SERVLET_PATHS"
         ])
 class KotlinCoroutinesServlet : SlingSafeMethodsServlet() {
 
-    private val log: Logger = LoggerFactory.getLogger(this.javaClass)
+    private val log: Logger = LoggerFactory.getLogger(javaClass)
 
     @Throws(ServletException::class, IOException::class)
-    override fun doGet(req: SlingHttpServletRequest,
+    @ExperimentalCoroutinesApi
+    public override fun doGet(req: SlingHttpServletRequest,
                        resp: SlingHttpServletResponse) {
         resp.contentType = "text/html"
 
@@ -45,7 +44,7 @@ class KotlinCoroutinesServlet : SlingSafeMethodsServlet() {
             for (i in 1..10000){
                 val j = i%2
                 asyncMsg += j
-                resp.writer.println("<span style=\"color:blue\">$j</span>")
+                resp.writer.print("<span style=\"color:blue\">$j</span>")
             }
 
             return@async asyncMsg
@@ -56,7 +55,7 @@ class KotlinCoroutinesServlet : SlingSafeMethodsServlet() {
         for (i in 1..10000){
             val j = i%2
             syncMsg += j
-            resp.writer.println("<span style=\"color:red\">$j</span>")
+            resp.writer.print("<span style=\"color:red\">$j</span>")
         }
 
         runBlocking {

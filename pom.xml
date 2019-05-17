@@ -21,7 +21,7 @@
     <groupId>com.github.guillaumec91</groupId>
     <artifactId>sling-kotlin-samples</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
 
     <name>Sling Kotlin Samples</name>
     <description>Sling based Kotlin OSGI samples</description>
@@ -635,12 +635,6 @@
             <dependency>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-osgi-bundle</artifactId>
-                <version>${kotlin.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-stdlib</artifactId>
                 <version>${kotlin.version}</version>
             </dependency>
             <dependency>

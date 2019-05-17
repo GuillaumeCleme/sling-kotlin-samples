@@ -25,7 +25,7 @@ class SimpleKotlinScheduledTask : Runnable{
     }
 
     @Activate
-    protected fun activate(config: KotlinSamplesConfig.SimpleKotlinScheduledTaskConfig) {
+    fun activate(config: KotlinSamplesConfig.SimpleKotlinScheduledTaskConfig) {
         this.config = config
     }
 }

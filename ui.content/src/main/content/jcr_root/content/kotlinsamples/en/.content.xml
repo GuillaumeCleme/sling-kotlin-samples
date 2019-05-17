@@ -90,10 +90,6 @@
                     fileReference="/content/dam/kotlinsamples/asset.jpg"
                     textIsRich="true"
                     titleFromPage="false"/>
-                <helloworld
-                    jcr:lastModifiedBy="admin"
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="kotlinsamples/components/content/helloworld"/>
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kotlinsamples/components/form/container"

@@ -21,7 +21,7 @@
     <groupId>com.github.guillaumec91</groupId>
     <artifactId>sling-kotlin-samples</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 
     <name>Sling Kotlin Samples</name>
     <description>Sling based Kotlin OSGI samples</description>
@@ -642,6 +642,11 @@
                 <artifactId>kotlin-test-junit</artifactId>
                 <version>${kotlin.version}</version>
                 <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jetbrains.kotlinx</groupId>
+                <artifactId>kotlinx-coroutines-core</artifactId>
+                <version>1.2.1</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

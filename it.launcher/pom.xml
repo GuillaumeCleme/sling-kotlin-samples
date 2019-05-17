@@ -20,7 +20,7 @@
     <parent>
         <groupId>com.github.guillaumec91</groupId>
         <artifactId>sling-kotlin-samples</artifactId>
-        <version>0.0.1</version>
+        <version>0.0.2</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -314,12 +314,12 @@
         <dependency>
             <groupId>com.github.guillaumec91</groupId>
             <artifactId>sling-kotlin-samples.it.tests</artifactId>
-            <version>0.0.1</version>
+            <version>0.0.2</version>
         </dependency>
         <dependency>
             <groupId>com.github.guillaumec91</groupId>
             <artifactId>sling-kotlin-samples.core</artifactId>
-            <version>0.0.1</version>
+            <version>0.0.2</version>
         </dependency>
     </dependencies>
 </project>

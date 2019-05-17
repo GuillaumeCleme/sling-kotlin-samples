@@ -636,12 +636,6 @@
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-osgi-bundle</artifactId>
                 <version>${kotlin.version}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-stdlib</artifactId>
-                <version>${kotlin.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.jetbrains.kotlin</groupId>

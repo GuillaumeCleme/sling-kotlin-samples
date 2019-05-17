@@ -1,9 +1,6 @@
 package com.github.guillaumec91.core.servlets
 
-import kotlinx.coroutines.Deferred
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.async
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.*
 import org.apache.sling.api.SlingHttpServletRequest
 import org.apache.sling.api.SlingHttpServletResponse
 import org.apache.sling.api.servlets.HttpConstants
@@ -33,8 +30,9 @@ private const val SERVLET_PATHS = "/bin/kotlinsamples/kotlincoroutinesservlet"
 class KotlinCoroutinesServlet : SlingSafeMethodsServlet() {
 
     private val log: Logger = LoggerFactory.getLogger(javaClass)
-    
+
     @Throws(ServletException::class, IOException::class)
+    @ExperimentalCoroutinesApi
     public override fun doGet(req: SlingHttpServletRequest,
                        resp: SlingHttpServletResponse) {
         resp.contentType = "text/html"

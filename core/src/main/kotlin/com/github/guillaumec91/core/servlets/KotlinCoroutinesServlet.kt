@@ -35,7 +35,7 @@ class KotlinCoroutinesServlet : SlingSafeMethodsServlet() {
     private val log: Logger = LoggerFactory.getLogger(javaClass)
     
     @Throws(ServletException::class, IOException::class)
-    override fun doGet(req: SlingHttpServletRequest,
+    public override fun doGet(req: SlingHttpServletRequest,
                        resp: SlingHttpServletResponse) {
         resp.contentType = "text/html"
 
@@ -46,7 +46,7 @@ class KotlinCoroutinesServlet : SlingSafeMethodsServlet() {
             for (i in 1..10000){
                 val j = i%2
                 asyncMsg += j
-                resp.writer.println("<span style=\"color:blue\">$j</span>")
+                resp.writer.print("<span style=\"color:blue\">$j</span>")
             }
 
             return@async asyncMsg
@@ -57,7 +57,7 @@ class KotlinCoroutinesServlet : SlingSafeMethodsServlet() {
         for (i in 1..10000){
             val j = i%2
             syncMsg += j
-            resp.writer.println("<span style=\"color:red\">$j</span>")
+            resp.writer.print("<span style=\"color:red\">$j</span>")
         }
 
         runBlocking {

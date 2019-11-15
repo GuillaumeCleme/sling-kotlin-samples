@@ -1,6 +1,5 @@
 package com.github.guillaumec91.core.servlets
 
-import com.github.guillaumec91.core.config.KotlinSamplesConfig
 import io.wcm.testing.mock.aem.junit5.AemContext
 import io.wcm.testing.mock.aem.junit5.AemContextExtension
 import org.junit.jupiter.api.Assertions.assertEquals
@@ -22,7 +21,7 @@ internal class SimpleKotlinServletTest {
         context.build().resource("/content/test", "jcr:title", "resource title").commit()
         context.currentResource("/content/test")
 
-        val config = `mock`(KotlinSamplesConfig.SimpleKotlinServletConfig::class.java)
+        val config = `mock`(SimpleKotlinServlet.Config::class.java)
         `when`<String>(config.myParameter).thenReturn("parameter value")
 
         val request = context.request()

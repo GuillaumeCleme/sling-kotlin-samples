@@ -1,6 +1,5 @@
 package com.github.guillaumec91.core.schedulers
 
-import com.github.guillaumec91.core.config.KotlinSamplesConfig
 import io.wcm.testing.mock.aem.junit5.AemContextExtension
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
@@ -26,7 +25,7 @@ internal class SimpleKotlinScheduledTaskTest {
 
     @Test
     fun run() {
-        val config = mock(KotlinSamplesConfig.SimpleKotlinScheduledTaskConfig::class.java)
+        val config = mock(SimpleKotlinScheduledTask.Config::class.java)
         `when`<String>(config.myParameter).thenReturn("parameter value")
 
         fixture.activate(config)

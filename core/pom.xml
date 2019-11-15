@@ -28,6 +28,8 @@
     <name>Sling Kotlin Samples - Core</name>
     <description>Core bundle for Sling Kotlin Samples</description>
     <build>
+        <sourceDirectory>src/main/kotlin</sourceDirectory>
+        <testSourceDirectory>src/test/kotlin</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.sling</groupId>
@@ -107,12 +109,6 @@
                         <goals>
                             <goal>compile</goal>
                         </goals>
-                        <configuration>
-                            <sourceDirs>
-                                <source>src/main/java</source>
-                                <source>src/main/kotlin</source>
-                            </sourceDirs>
-                        </configuration>
                     </execution>
                     <execution>
                         <id>test-compile</id>

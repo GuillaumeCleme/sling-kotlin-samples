@@ -20,7 +20,7 @@
     <parent>
         <groupId>com.github.guillaumec91</groupId>
         <artifactId>sling-kotlin-samples</artifactId>
-        <version>0.0.2</version>
+        <version>0.0.3</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>sling-kotlin-samples.core</artifactId>
@@ -28,6 +28,8 @@
     <name>Sling Kotlin Samples - Core</name>
     <description>Core bundle for Sling Kotlin Samples</description>
     <build>
+        <sourceDirectory>src/main/kotlin</sourceDirectory>
+        <testSourceDirectory>src/test/kotlin</testSourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.sling</groupId>
@@ -114,35 +116,6 @@
                         <goals>
                             <goal>test-compile</goal>
                         </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>add-source</goal>
-                        </goals>
-                        <configuration>
-                            <sources>
-                                <source>src/main/kotlin</source>
-                            </sources>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>add-test-source</id>
-                        <phase>generate-test-sources</phase>
-                        <goals>
-                            <goal>add-test-source</goal>
-                        </goals>
-                        <configuration>
-                            <sources>
-                                <source>src/test/kotlin</source>
-                            </sources>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>

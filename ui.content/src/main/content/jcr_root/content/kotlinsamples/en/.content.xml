@@ -4,6 +4,8 @@
     <jcr:content
         cq:contextHubPath="/etc/cloudsettings/default/contexthub"
         cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+        cq:lastModified="{Date}2019-11-19T18:29:15.091-08:00"
+        cq:lastModifiedBy="admin"
         cq:template="/conf/kotlinsamples/settings/wcm/templates/content-page"
         jcr:primaryType="cq:PageContent"
         jcr:title="English"
@@ -17,6 +19,13 @@
                 jcr:lastModifiedBy="admin"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
+                <kotlin_helloworld
+                    jcr:created="{Date}2019-11-19T18:29:14.966-08:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2019-11-19T18:29:14.966-08:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kotlinsamples/components/content/kotlin-helloworld"/>
                 <title
                     jcr:primaryType="nt:unstructured"
                     jcr:title="What is Lorem Ipsum?"

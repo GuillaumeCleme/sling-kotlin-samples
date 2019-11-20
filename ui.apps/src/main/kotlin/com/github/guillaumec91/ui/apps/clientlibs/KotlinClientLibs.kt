@@ -1,5 +1,4 @@
-val log: dynamic = null
 
-fun hello(){
-    log.info("Hello")
+fun main(args: Array<String>){
+    console.info("Hello from Kotlin JS!")
 }

@@ -18,7 +18,7 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.github.guillaumec91</groupId>
+        <groupId>me.guillaumecle</groupId>
         <artifactId>sling-kotlin-samples</artifactId>
         <version>0.0.4</version>
         <relativePath>../pom.xml</relativePath>
@@ -69,7 +69,7 @@
                             *
                         </Import-Package>
                         <Sling-Model-Packages>
-                            com.github.guillaumec91.core
+                            me.guillaumecle.core
                         </Sling-Model-Packages>
                         <_dsannotations>*</_dsannotations>
                         <_metatypeannotations>*</_metatypeannotations>

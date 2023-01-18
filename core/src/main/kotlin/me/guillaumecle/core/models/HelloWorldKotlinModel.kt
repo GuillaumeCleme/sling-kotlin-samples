@@ -1,4 +1,4 @@
-package com.github.guillaumec91.core.models
+package me.guillaumecle.core.models
 
 import org.apache.sling.api.resource.ResourceResolver.PROPERTY_RESOURCE_TYPE
 

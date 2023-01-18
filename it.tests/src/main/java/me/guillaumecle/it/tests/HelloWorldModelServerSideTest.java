@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package com.github.guillaumec91.it.tests;
+package me.guillaumecle.it.tests;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;

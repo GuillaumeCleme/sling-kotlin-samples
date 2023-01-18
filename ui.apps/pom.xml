@@ -21,7 +21,7 @@
     <!-- P A R E N T  P R O J E C T  D E S C R I P T I O N                      -->
     <!-- ====================================================================== -->
     <parent>
-        <groupId>com.github.guillaumec91</groupId>
+        <groupId>me.guillaumecle</groupId>
         <artifactId>sling-kotlin-samples</artifactId>
         <version>0.0.4</version>
         <relativePath>../pom.xml</relativePath>
@@ -63,7 +63,7 @@
                     <group>kotlinsamples</group>
                     <embeddeds>
                         <embedded>
-                            <groupId>com.github.guillaumec91</groupId>
+                            <groupId>me.guillaumecle</groupId>
                             <artifactId>sling-kotlin-samples.core</artifactId>
                             <target>/apps/kotlinsamples/install</target>
                         </embedded>
@@ -184,7 +184,7 @@
     <!-- ====================================================================== -->
     <dependencies>
         <dependency>
-            <groupId>com.github.guillaumec91</groupId>
+            <groupId>me.guillaumecle</groupId>
             <artifactId>sling-kotlin-samples.core</artifactId>
             <version>0.0.4</version>
         </dependency>

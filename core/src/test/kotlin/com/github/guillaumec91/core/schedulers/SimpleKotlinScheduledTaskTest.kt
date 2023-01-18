@@ -1,4 +1,4 @@
-package com.github.guillaumec91.core.schedulers
+package me.guillaumecle.core.schedulers
 
 import io.wcm.testing.mock.aem.junit5.AemContextExtension
 import org.junit.jupiter.api.Assertions.assertEquals

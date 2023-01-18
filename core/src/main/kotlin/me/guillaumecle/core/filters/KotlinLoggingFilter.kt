@@ -1,4 +1,4 @@
-package com.github.guillaumec91.core.filters
+package me.guillaumecle.core.filters
 
 import java.io.IOException
 import javax.servlet.Filter

@@ -1,4 +1,4 @@
-package com.github.guillaumec91.core.listeners
+package me.guillaumecle.core.listeners
 
 import org.apache.sling.api.SlingConstants
 import org.osgi.framework.Constants

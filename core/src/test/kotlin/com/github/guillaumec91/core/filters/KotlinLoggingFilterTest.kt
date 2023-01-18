@@ -1,4 +1,4 @@
-package com.github.guillaumec91.core.filters
+package me.guillaumecle.core.filters
 
 import io.wcm.testing.mock.aem.junit5.AemContext
 import io.wcm.testing.mock.aem.junit5.AemContextExtension

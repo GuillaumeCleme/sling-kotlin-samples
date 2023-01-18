@@ -1,6 +1,6 @@
-package com.github.guillaumec91.core.schedulers
+package me.guillaumecle.core.schedulers
 
-import com.github.guillaumec91.core.schedulers.SimpleKotlinScheduledTask.Config
+import me.guillaumecle.core.schedulers.SimpleKotlinScheduledTask.Config
 import org.osgi.service.component.annotations.Activate
 import org.osgi.service.component.annotations.Component
 import org.osgi.service.metatype.annotations.AttributeDefinition

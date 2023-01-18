@@ -1,4 +1,4 @@
-package com.github.guillaumec91.core.servlets
+package me.guillaumecle.core.servlets
 
 import kotlinx.coroutines.*
 import org.apache.sling.api.SlingHttpServletRequest

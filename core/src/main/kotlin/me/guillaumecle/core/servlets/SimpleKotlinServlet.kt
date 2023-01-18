@@ -1,6 +1,6 @@
-package com.github.guillaumec91.core.servlets
+package me.guillaumecle.core.servlets
 
-import com.github.guillaumec91.core.servlets.SimpleKotlinServlet.Config
+import me.guillaumecle.core.servlets.SimpleKotlinServlet.Config
 import org.apache.sling.api.SlingHttpServletRequest
 import org.apache.sling.api.SlingHttpServletResponse
 import org.apache.sling.api.servlets.HttpConstants

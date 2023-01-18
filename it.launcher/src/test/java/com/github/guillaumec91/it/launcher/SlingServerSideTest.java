@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package com.github.guillaumec91.it.launcher;
+package me.guillaumecle.it.launcher;
 
 import static org.junit.Assert.assertEquals;
 
@@ -27,7 +27,7 @@ import org.junit.runner.RunWith;
 public class SlingServerSideTest extends SlingServerSideTestsBase 
 implements SlingRemoteTestParameters, SlingTestsCountChecker {
     
-    public static final String TEST_SELECTOR = "com.github.guillaumec91.it.tests";
+    public static final String TEST_SELECTOR = "me.guillaumecle.it.tests";
     public static final int TESTS_AT_THIS_PATH = 1;
     
     public void checkNumberOfTests(int numberOfTestsExecuted) {

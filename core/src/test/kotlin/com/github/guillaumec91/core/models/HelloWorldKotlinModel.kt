@@ -1,4 +1,4 @@
-package com.github.guillaumec91.core.models
+package me.guillaumecle.core.models
 
 import com.day.cq.wcm.api.Page
 import io.wcm.testing.mock.aem.junit5.AemContext

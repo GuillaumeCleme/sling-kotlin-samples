@@ -1,4 +1,4 @@
-package com.github.guillaumec91.core.servlets
+package me.guillaumecle.core.servlets
 
 import io.wcm.testing.mock.aem.junit5.AemContext
 import io.wcm.testing.mock.aem.junit5.AemContextExtension

@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package com.github.guillaumec91.it.launcher;
+package me.guillaumecle.it.launcher;
 
 import static org.junit.Assert.fail;
 
